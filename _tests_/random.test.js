@@ -1,9 +1,6 @@
-// const { TestWatcher } = require('jest');
-const Potion = require('../lib/Potion.js');
+const randomNumber = require('../lib/random');
 
-test('creates a health potion object', () => {
-    const potion = new Potion('health');
-
-    expect(potion.name).toBe('health');
-    expect(potion.value).toEqual(expect.any(Number));
+test('generates random number between 1 and 10', () => {
+    expect(randomNumber()).toBeGreaterThanOrEqual(1);
+    expect(randomNumber()).toBeLessThanOrEqual(10);
 });
